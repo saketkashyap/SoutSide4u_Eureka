@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Soutside4u_eureka
+    
+server:
+  port:  ${PORT:8002}
+
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    fetch-registry: false
+    register-with-eureka: false  
